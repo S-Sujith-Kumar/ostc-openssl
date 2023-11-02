@@ -20,6 +20,7 @@ To build OpenSSL for universal agents, we require building:
 - [OpenSSL 0.9.8](https://github.com/Microsoft/ostc-openssl#building-ssl-098)
 - [OpenSSL 1.0.0](https://github.com/Microsoft/ostc-openssl#building-ssl-100)
 - [OpenSSL 1.1.0](https://github.com/Microsoft/ostc-openssl#building-ssl-110)
+- [OpenSSL 3.0.0](https://github.com/Microsoft/ostc-openssl#building-ss1-300)
 
 ##### Building SSL 0.9.8
 
@@ -105,6 +106,21 @@ make
 make test
 sudo make install_sw
 ```
+
+##### Building SSL 3.0.0
+
+Untar your distribution file, if necessary, and go into the base
+directory of OpenSSL 3.0.0 with a command like:<br>```cd openssl-3.0.0```
+
+To configure and build SSL 3.0.0, use the following commands:
+
+```
+./config --prefix=/usr/local_ssl_3.0.0 shared -no-ssl2 -no-ec -no-ec2m -no-ecdh
+make
+make test
+sudo make install_sw
+```
+
 
 ### Closing notes
 
